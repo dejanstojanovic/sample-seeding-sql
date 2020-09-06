@@ -1,0 +1,9 @@
+C:\Work\GitHub\Sample.Seeding\Sample.Seeding.Domain\bin\Debug\netstandard2.0\Sample.Seeding.Domain.deps.json
+C:\Work\GitHub\Sample.Seeding\Sample.Seeding.Domain\bin\Debug\netstandard2.0\Sample.Seeding.Domain.dll
+C:\Work\GitHub\Sample.Seeding\Sample.Seeding.Domain\bin\Debug\netstandard2.0\Sample.Seeding.Domain.pdb
+C:\Work\GitHub\Sample.Seeding\Sample.Seeding.Domain\obj\Debug\netstandard2.0\Sample.Seeding.Domain.csprojAssemblyReference.cache
+C:\Work\GitHub\Sample.Seeding\Sample.Seeding.Domain\obj\Debug\netstandard2.0\Sample.Seeding.Domain.AssemblyInfoInputs.cache
+C:\Work\GitHub\Sample.Seeding\Sample.Seeding.Domain\obj\Debug\netstandard2.0\Sample.Seeding.Domain.AssemblyInfo.cs
+C:\Work\GitHub\Sample.Seeding\Sample.Seeding.Domain\obj\Debug\netstandard2.0\Sample.Seeding.Domain.csproj.CoreCompileInputs.cache
+C:\Work\GitHub\Sample.Seeding\Sample.Seeding.Domain\obj\Debug\netstandard2.0\Sample.Seeding.Domain.dll
+C:\Work\GitHub\Sample.Seeding\Sample.Seeding.Domain\obj\Debug\netstandard2.0\Sample.Seeding.Domain.pdb

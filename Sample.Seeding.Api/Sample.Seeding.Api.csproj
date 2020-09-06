@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.Seeding.Data.Infrastructure\Sample.Seeding.Data.Infrastructure.csproj" />
+    <ProjectReference Include="..\Sample.Seeding.Domain\Sample.Seeding.Domain.csproj" />
+  </ItemGroup>
+
+
+</Project>

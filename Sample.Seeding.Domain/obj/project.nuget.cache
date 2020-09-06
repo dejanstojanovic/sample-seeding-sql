@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "d61kYtqREFoQUgiBMb+2iBBMFMkehjYR6Gif091jlGE9Ovdd49GkzRfdQoOv22QwfbxYZKXds1ePpYFKlOD4lw==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Domain\\Sample.Seeding.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dstoj\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\dstoj\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

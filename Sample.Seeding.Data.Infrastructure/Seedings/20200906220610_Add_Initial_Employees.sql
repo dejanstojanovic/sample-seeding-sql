@@ -1,2 +1,2 @@
-﻿INSERT INTO Employees(Id, FirstName, LastName, Email, PhoneNumber) VALUES (NEWID(), 'James', 'Kirk', 'j.kirk@enterprise.ss', '+3655493875')
-INSERT INTO Employees(Id, FirstName, LastName, Email) VALUES (NEWID(), 'Nyota', 'Uhura', 'n.uhura@enterprise.ss')
+﻿INSERT INTO Employees(Id, FirstName, LastName, Email, PhoneNumber) VALUES (NEWID(), 'Michael', 'Sullivan', 'm.sullivan@sample.com', '697-555-0142')
+INSERT INTO Employees(Id, FirstName, LastName, Email) VALUES (NEWID(), 'David', 'Bradley', 'd.bradley@sample.com')

@@ -5288,11 +5288,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Api\\Sample.Seeding.Api.csproj",
+      "projectUniqueName": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Api\\Sample.Seeding.Api.csproj",
       "projectName": "Sample.Seeding.Api",
-      "projectPath": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Api\\Sample.Seeding.Api.csproj",
+      "projectPath": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Api\\Sample.Seeding.Api.csproj",
       "packagesPath": "C:\\Users\\dstoj\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Api\\obj\\",
+      "outputPath": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dstoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5309,11 +5309,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Data.Infrastructure\\Sample.Seeding.Data.Infrastructure.csproj": {
-              "projectPath": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Data.Infrastructure\\Sample.Seeding.Data.Infrastructure.csproj"
+            "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Data.Infrastructure\\Sample.Seeding.Data.Infrastructure.csproj": {
+              "projectPath": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Data.Infrastructure\\Sample.Seeding.Data.Infrastructure.csproj"
             },
-            "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Domain\\Sample.Seeding.Domain.csproj": {
-              "projectPath": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Domain\\Sample.Seeding.Domain.csproj"
+            "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Domain\\Sample.Seeding.Domain.csproj": {
+              "projectPath": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Domain\\Sample.Seeding.Domain.csproj"
             }
           }
         }

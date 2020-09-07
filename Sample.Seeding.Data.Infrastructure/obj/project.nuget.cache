@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tRT3bypARXjaWj8/ZP3ggOMYG6ZLP43SgQ7bwhsVQttNlvNiz4gfUZw2D/HA+mwU9qTC4glYM9ujKKtO1ZAvOA==",
+  "dgSpecHash": "DwUom9Kp2HGeHkxsyVzeYIs7mvkI1pR/SPc6bo/4+PQwoupaXPMw/GVnxlPIDTFCkKUymSL0ByUDi2i8cEtuYw==",
   "success": true,
-  "projectFilePath": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Data.Infrastructure\\Sample.Seeding.Data.Infrastructure.csproj",
+  "projectFilePath": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Data.Infrastructure\\Sample.Seeding.Data.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dstoj\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\dstoj\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

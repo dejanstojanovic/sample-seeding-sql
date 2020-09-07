@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Domain\\Sample.Seeding.Domain.csproj",
+      "projectUniqueName": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Domain\\Sample.Seeding.Domain.csproj",
       "projectName": "Sample.Seeding.Domain",
-      "projectPath": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Domain\\Sample.Seeding.Domain.csproj",
+      "projectPath": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Domain\\Sample.Seeding.Domain.csproj",
       "packagesPath": "C:\\Users\\dstoj\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\GitHub\\Sample.Seeding\\Sample.Seeding.Domain\\obj\\",
+      "outputPath": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dstoj\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -2,7 +2,8 @@
   "profiles": {
     "Sample.Seeding.Tool": {
       "commandName": "Project",
-      "commandLineArgs": "-n Sample -o Seedings"
+      "commandLineArgs": "-n Sample -o C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Tool\\Seedings",
+      "workingDirectory": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Tool\\Seedings"
     }
   }
 }

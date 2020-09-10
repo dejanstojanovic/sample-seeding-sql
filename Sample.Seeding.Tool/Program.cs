@@ -18,7 +18,7 @@ namespace Sample.Seeding.Tool
             cmd.OnExecute(() =>
             {
                 //String currentExecutionFolder = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-                String currentExecutionFolder = System.Environment.CurrentDirectory;
+                String currentExecutionFolder = Directory.GetCurrentDirectory();
                 String projectFile = null;
                 String outputFolder = currentExecutionFolder;
 
@@ -41,6 +41,7 @@ namespace Sample.Seeding.Tool
 
                 // Calculate absolute output file path
                 var outputFile = Path.Combine(outputFolder, $"{DateTime.Now.ToString("yyyyMMddHHmmss")}_{argName.Value()}.sql");
+
 
                 // Find project file
                 if (!argProject.HasValue())

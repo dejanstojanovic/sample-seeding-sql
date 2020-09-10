@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Sample.Seeding.Tool": {
+      "commandName": "Project",
+      "commandLineArgs": "-n Sample -o Seedings"
+    }
+  }
+}

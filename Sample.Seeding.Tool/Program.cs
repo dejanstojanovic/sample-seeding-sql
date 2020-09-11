@@ -26,6 +26,7 @@ namespace Sample.Seeding.Tool
                 if (!argName.HasValue())
                     throw new ArgumentNullException(paramName: "name", message: "Argument name required!");
 
+                #region Seeding script file
 
                 // Calculate output path
                 if (!argOutput.HasValue())
@@ -42,6 +43,17 @@ namespace Sample.Seeding.Tool
                 // Calculate absolute output file path
                 var outputFile = Path.Combine(outputFolder, $"{DateTime.Now.ToString("yyyyMMddHHmmss")}_{argName.Value()}.sql");
 
+                // Create 
+                var outputContentStream = typeof(Program).Assembly.GetManifestResourceStream($"{typeof(Program).Assembly.GetName().Name}.Template.sql");
+                using (StreamReader reader = new StreamReader(outputContentStream))
+                {
+                    var contentText = reader.ReadToEnd();
+                    File.WriteAllText(outputFile, contentText);
+                }
+
+                #endregion
+
+                #region Project file update
 
                 // Find project file
                 if (!argProject.HasValue())
@@ -61,9 +73,9 @@ namespace Sample.Seeding.Tool
                         return files.Single();
                 }
 
-
-
                 UpdateProject(projectFile, outputFile);
+
+                #endregion
 
                 Console.WriteLine(outputFolder);
                 Console.WriteLine(projectFile);

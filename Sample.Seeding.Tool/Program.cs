@@ -119,9 +119,7 @@ namespace Sample.Seeding.Tool
             embeddedResourceElement.Attributes.Append(includeAttribute);
             node.AppendChild(embeddedResourceElement);
 
-
-            doc.Save(@"C:\temp\project.csproj");
-
+            doc.Save(projectFilename);
         }
 
     }

@@ -17,9 +17,8 @@ namespace Sample.Seeding.Tool
 
             cmd.OnExecute(() =>
             {
-                //String currentExecutionFolder = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
                 String currentExecutionFolder = Directory.GetCurrentDirectory();
-                String projectFile = null;
+                String projectFile = argProject.HasValue() ? argProject.Value():null;
                 String outputFolder = currentExecutionFolder;
 
                 // Check name param
@@ -41,44 +40,27 @@ namespace Sample.Seeding.Tool
                     Directory.CreateDirectory(outputFolder);
 
                 // Calculate absolute output file path
-                var outputFile = Path.Combine(outputFolder, $"{DateTime.Now.ToString("yyyyMMddHHmmss")}_{argName.Value()}.sql");
+                var outputFilePath = Path.Combine(outputFolder, $"{DateTime.Now.ToString("yyyyMMddHHmmss")}_{argName.Value()}.sql");
 
                 // Create 
-                var outputContentStream = typeof(Program).Assembly.GetManifestResourceStream($"{typeof(Program).Assembly.GetName().Name}.Template.sql");
-                using (StreamReader reader = new StreamReader(outputContentStream))
+                var assembly = typeof(Program).Assembly;
+                var outputContentTemplateStream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.Template.sql");
+                using (StreamReader reader = new StreamReader(outputContentTemplateStream))
                 {
                     var contentText = reader.ReadToEnd();
-                    File.WriteAllText(outputFile, contentText);
+                    File.WriteAllText(outputFilePath, contentText);
                 }
 
                 #endregion
 
                 #region Project file update
-
-                // Find project file
                 if (!argProject.HasValue())
                     projectFile = FindProject(currentExecutionFolder);
 
-                string FindProject(string folder)
-                {
-                    var files = Directory.GetFiles(folder, "*.csproj");
-                    if (files == null || !files.Any())
-                        if (Directory.GetParent(folder) == null)
-                            throw new ArgumentException(paramName: "project", message: "Project file not found!");
-                        else
-                            return FindProject(Directory.GetParent(folder).FullName);
-                    else if (files.Length > 1)
-                        throw new ArgumentException(paramName: "project", message: "More than one project found!");
-                    else
-                        return files.Single();
-                }
-
-                UpdateProject(projectFile, outputFile);
-
+                UpdateProject(projectFile, outputFilePath);
                 #endregion
 
-                Console.WriteLine(outputFolder);
-                Console.WriteLine(projectFile);
+                Console.WriteLine($"Created seeding script file: {outputFilePath}");
 
                 return 0;
             });
@@ -90,6 +72,20 @@ namespace Sample.Seeding.Tool
                 Console.ReadLine();
         }
 
+
+        static string FindProject(string folder)
+        {
+            var files = Directory.GetFiles(folder, "*.csproj");
+            if (files == null || !files.Any())
+                if (Directory.GetParent(folder) == null)
+                    throw new ArgumentException(paramName: "project", message: "Project file not found!");
+                else
+                    return FindProject(Directory.GetParent(folder).FullName);
+            else if (files.Length > 1)
+                throw new ArgumentException(paramName: "project", message: "More than one project found!");
+            else
+                return files.Single();
+        }
 
         static void UpdateProject(String projectFilename, String seedingScriptFilename)
         {

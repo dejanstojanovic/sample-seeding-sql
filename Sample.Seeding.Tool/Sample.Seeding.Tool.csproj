@@ -15,4 +15,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Seedings\" />
+  </ItemGroup>
 </Project>

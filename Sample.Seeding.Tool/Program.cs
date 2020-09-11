@@ -50,8 +50,7 @@ namespace Sample.Seeding.Tool
                     var outputFilePath = Path.Combine(outputFolder, $"{DateTime.Now.ToString("yyyyMMddHHmmss")}_{name}.sql");
 
                     // Create 
-                    var assembly = typeof(Program).Assembly;
-                    var outputContentTemplateStream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.Template.sql");
+                    var outputContentTemplateStream = typeof(Program).Assembly.GetManifestResourceStream($"{typeof(Program).Namespace}.Template.sql");
                     using (StreamReader reader = new StreamReader(outputContentTemplateStream))
                     {
                         var contentText = reader.ReadToEnd();

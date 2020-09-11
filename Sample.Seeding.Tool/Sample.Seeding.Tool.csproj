@@ -2,10 +2,12 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <PackageId>ef-seed</PackageId>
+    
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>seed</ToolCommandName>
+    <ToolCommandName>seeding</ToolCommandName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    
+    <AssemblyName>dotnet-seeding</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Template.sql" />

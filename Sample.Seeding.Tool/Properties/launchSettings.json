@@ -3,7 +3,8 @@
     "Sample.Seeding.Tool": {
       "commandName": "Project",
       //"commandLineArgs": "add -n Sample -o C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Tool\\Seedings",
-      "commandLineArgs": "add -h",
+      "commandLineArgs": "add Sample -o C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Tool\\Seedings",
+      //"commandLineArgs": "add -h",
       "workingDirectory": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Tool"
     }
   }

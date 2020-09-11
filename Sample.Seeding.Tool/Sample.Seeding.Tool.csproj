@@ -5,6 +5,7 @@
     <PackageId>ef-seed</PackageId>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>seed</ToolCommandName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Template.sql" />
@@ -14,8 +15,5 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Seedings\" />
   </ItemGroup>
 </Project>

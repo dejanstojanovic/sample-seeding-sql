@@ -123,15 +123,8 @@ namespace Sample.Seeding.Tool
 
                 
             });
-
-
             cmd.Execute(args);
 
-            if (System.Diagnostics.Debugger.IsAttached)
-                Console.ReadLine();
         }
-
-
-
     }
 }

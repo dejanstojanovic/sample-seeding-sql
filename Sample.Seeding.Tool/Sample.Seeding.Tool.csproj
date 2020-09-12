@@ -1,12 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <!-- What to build -->
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <!-- Output .exe file name (needs to follow global tool naming) -->
+    <AssemblyName>dotnet-seeding</AssemblyName>
+    
+    <!-- Package related properties -->
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>seeding</ToolCommandName>
     <PackageType>.NET CLI global tool</PackageType>
+    
+    <!-- Generate NuGet package (.nupkg) file in output (bin) folder on build -->
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyName>dotnet-seeding</AssemblyName>
+
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Template.sql" />

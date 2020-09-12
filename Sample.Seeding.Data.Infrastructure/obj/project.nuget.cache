@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DwUom9Kp2HGeHkxsyVzeYIs7mvkI1pR/SPc6bo/4+PQwoupaXPMw/GVnxlPIDTFCkKUymSL0ByUDi2i8cEtuYw==",
+  "dgSpecHash": "S7pgWkvUKbTUJ+AFvL0hN8gD4ryfL0pTiNyQ64b1wmJSGdrNyOWJQkSQHrT4SYFfNdgVd1RT48u0b0cBHDeAsQ==",
   "success": true,
   "projectFilePath": "C:\\Work\\GitHub\\sample-seeding-sql\\Sample.Seeding.Data.Infrastructure\\Sample.Seeding.Data.Infrastructure.csproj",
   "expectedPackageFiles": [

@@ -19,7 +19,7 @@ namespace Sample.Seeding.Data.Infrastructure.Extensions
                     x =>
                     {
                         x.MigrationsHistoryTable("__EFMigrationsHistory");
-                        x.MigrationsAssembly(typeof(DbContextExtensions).Assembly.GetName().Name);
+                        x.MigrationsAssembly(typeof(void).Assembly.GetName().Name);
                     }
                 );
             });

@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Sample.Seeding.Data.Infrastructure.Extensions;
 
@@ -21,6 +22,8 @@ namespace Sample.Seeding.Api
         {
             //REGISTER EMPLOYEES DB CONTEXT
             services.AddEmployeesDbContext(Configuration);
+
+            
 
             services.AddControllers();
         }

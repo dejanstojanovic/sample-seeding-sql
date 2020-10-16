@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore.SqlServer.Seeding", "..\EntityFrameworkCore.SqlServer.Seeding\EntityFrameworkCore.SqlServer.Seeding.csproj", "{F4F0A1E5-CE1F-40C8-A099-22E368A1AE11}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore.SqlServer.Seeding.Tool", "..\EntityFrameworkCore.SqlServer.Seeding.Tool\EntityFrameworkCore.SqlServer.Seeding.Tool.csproj", "{2F1B4957-3AE6-42C9-89FB-E852FDC97B95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{DAE0B087-794F-40CB-94B8-EF45B65BE831}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Seeding.Domain", "Sample.Seeding.Domain\Sample.Seeding.Domain.csproj", "{EB122B55-2BBC-43EA-B945-0C967CF56BC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Seeding.Data.Infrastructure", "Sample.Seeding.Data.Infrastructure\Sample.Seeding.Data.Infrastructure.csproj", "{66366E18-A534-4637-8984-DB82573A2302}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Seeding.Api", "Sample.Seeding.Api\Sample.Seeding.Api.csproj", "{7951B3A2-B68C-4229-A5A6-CDEF2821DFF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4F0A1E5-CE1F-40C8-A099-22E368A1AE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F0A1E5-CE1F-40C8-A099-22E368A1AE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F0A1E5-CE1F-40C8-A099-22E368A1AE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F0A1E5-CE1F-40C8-A099-22E368A1AE11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1B4957-3AE6-42C9-89FB-E852FDC97B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1B4957-3AE6-42C9-89FB-E852FDC97B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1B4957-3AE6-42C9-89FB-E852FDC97B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1B4957-3AE6-42C9-89FB-E852FDC97B95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB122B55-2BBC-43EA-B945-0C967CF56BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB122B55-2BBC-43EA-B945-0C967CF56BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB122B55-2BBC-43EA-B945-0C967CF56BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB122B55-2BBC-43EA-B945-0C967CF56BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66366E18-A534-4637-8984-DB82573A2302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66366E18-A534-4637-8984-DB82573A2302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66366E18-A534-4637-8984-DB82573A2302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66366E18-A534-4637-8984-DB82573A2302}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7951B3A2-B68C-4229-A5A6-CDEF2821DFF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7951B3A2-B68C-4229-A5A6-CDEF2821DFF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7951B3A2-B68C-4229-A5A6-CDEF2821DFF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7951B3A2-B68C-4229-A5A6-CDEF2821DFF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB122B55-2BBC-43EA-B945-0C967CF56BC1} = {DAE0B087-794F-40CB-94B8-EF45B65BE831}
+		{66366E18-A534-4637-8984-DB82573A2302} = {DAE0B087-794F-40CB-94B8-EF45B65BE831}
+		{7951B3A2-B68C-4229-A5A6-CDEF2821DFF5} = {DAE0B087-794F-40CB-94B8-EF45B65BE831}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A61572CA-9A18-43B3-9D0D-E99CA77BCDD7}
+	EndGlobalSection
+EndGlobal

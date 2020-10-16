@@ -1,9 +1,11 @@
+using EntityFrameworkCore.SqlServer.Seeding.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using Sample.Seeding.Data.Infrastructure;
 using Sample.Seeding.Data.Infrastructure.Extensions;
 
 namespace Sample.Seeding.Api
@@ -20,10 +22,10 @@ namespace Sample.Seeding.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //REGISTER EMPLOYEES DB CONTEXT
-            services.AddEmployeesDbContext(Configuration);
 
-            
+            services.AddScriptSeeding(Configuration.GetConnectionString("EmployeesDatabase"));
+
+            services.AddEmployeesDbContext(Configuration);
 
             services.AddControllers();
         }
@@ -36,9 +38,11 @@ namespace Sample.Seeding.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            //DO THE EMPLOYEES SEEDING
+            app.MigrateEmployeesData(Configuration);
 
-            app.SeedEmployeesData(Configuration);
+            app.SeedFromScripts(typeof(EmployeesDatabaseContext).Assembly);
+
+
 
             app.UseHttpsRedirection();
             app.UseRouting();

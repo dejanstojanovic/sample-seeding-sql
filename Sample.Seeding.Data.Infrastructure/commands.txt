@@ -5,7 +5,7 @@ dotnet tool install dotnet-ef --global --ignore-failed-sources
 dotnet tool update dotnet-ef --global --ignore-failed-sources
 
 # Add migration
-dotnet ef migrations add Add_Seeding_Tracking -o Migrations -c EmployeesDatabaseContext
+dotnet ef migrations add Initial_Migration -o Migrations -c EmployeesDatabaseContext
 
 # Update database
 dotnet ef database update -c EmployeesDatabaseContext

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Sample.Seeding.Data.Infrastructure.Migrations
+namespace EntityFrameworkCore.SqlServer.Seeding.Migrations
 {
     public partial class Add_Seeding_Tracking : Migration
     {

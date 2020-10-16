@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EntityFrameworkCore.SqlServer.Seeding.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Sample.Seeding.Data.Infrastructure.Entities;
 
-namespace Sample.Seeding.Data.Infrastructure.Configurations
+namespace EntityFrameworkCore.SqlServer.Seeding.Configurations
 {
     class SeedingEntryConfiguration : IEntityTypeConfiguration<SeedingEntry>
     {

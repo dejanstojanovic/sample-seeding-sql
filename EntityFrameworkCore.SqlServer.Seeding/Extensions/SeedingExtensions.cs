@@ -1,25 +1,88 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using EntityFrameworkCore.SqlServer.Seeding.Models;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace EntityFrameworkCore.SqlServer.Seeding.Extensions
 {
     public static class SeedingExtensions
     {
-        public static void AddScriptSeeding(this IServiceCollection services, IConfiguration configuration)
+        public static void AddScriptSeeding(this IServiceCollection services, String connectionString)
         {
-            services.AddDbContext<EmployeesDatabaseContext>(options =>
+            services.AddDbContext<SeedingDbContext>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString(DbContextConfigConstants.DB_CONNECTION_CONFIG_NAME),
+                options.UseSqlServer(connectionString,
                     x =>
                     {
-                        x.MigrationsHistoryTable("__EFMigrationsHistory");
-                        x.MigrationsAssembly(typeof(void).Assembly.GetName().Name);
+                        x.MigrationsAssembly(typeof(SeedingExtensions).Assembly.GetName().Name);
                     }
                 );
             });
+        }
+
+        public static void SeedFromScripts(this IApplicationBuilder app, Assembly seedingAssembly, String resourceFolder = "Seedings")
+        {
+            using (var serviceScope = app.ApplicationServices
+                .GetRequiredService<IServiceScopeFactory>()
+                .CreateScope())
+            {
+                using (var context = serviceScope.ServiceProvider.GetService<SeedingDbContext>())
+                {
+                    context.Database.Migrate();
+                    var files = seedingAssembly.GetManifestResourceNames();
+
+                    var executedSeedings = context.SeedingEntries.ToArray();
+                    var folderPathSegment = !String.IsNullOrWhiteSpace(resourceFolder) ? $"{resourceFolder}." : String.Empty;
+                    var filePrefix = $"{seedingAssembly.GetName().Name}.{folderPathSegment}";
+                    foreach (var file in files.Where(f => f.StartsWith(filePrefix) && f.EndsWith(".sql"))
+                                              .Select(f => new
+                                              {
+                                                  PhysicalFile = f,
+                                                  LogicalFile = f.Replace(filePrefix, String.Empty)
+                                              })
+                                              .OrderBy(f => f.LogicalFile))
+                    {
+                        if (executedSeedings.Any(e => e.Name == file.LogicalFile))
+                            continue;
+                        
+                        string command = string.Empty;
+                        using (Stream stream = seedingAssembly.GetManifestResourceStream(file.PhysicalFile))
+                        {
+                            using (StreamReader reader = new StreamReader(stream))
+                            {
+                                command = reader.ReadToEnd();
+                            }
+                        }
+
+                        if (String.IsNullOrWhiteSpace(command))
+                            continue;
+
+                        using (var transaction = context.Database.BeginTransaction())
+                        {
+                            try
+                            {
+                                context.Database.ExecuteSqlRaw(command);
+                                context.SeedingEntries.Add(new SeedingEntry() { Name = file.LogicalFile });
+                                context.SaveChanges();
+                                transaction.Commit();
+                            }
+                            catch
+                            {
+                                transaction.Rollback();
+                                throw;
+                            }
+                        }
+
+                    }
+                }
+            }
         }
     }
 }

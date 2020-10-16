@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EntityFrameworkCore.SqlServer.Seeding\EntityFrameworkCore.SqlServer.Seeding.csproj" />
     <ProjectReference Include="..\Sample.Seeding.Data.Infrastructure\Sample.Seeding.Data.Infrastructure.csproj" />
     <ProjectReference Include="..\Sample.Seeding.Domain\Sample.Seeding.Domain.csproj" />
   </ItemGroup>

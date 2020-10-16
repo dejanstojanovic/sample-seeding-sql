@@ -19,16 +19,6 @@ namespace Sample.Seeding.Data.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Sample.Seeding.Data.Infrastructure.Entities.SeedingEntry", b =>
-                {
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Name");
-
-                    b.ToTable("__SeedingHistory");
-                });
-
             modelBuilder.Entity("Sample.Seeding.Domain.Employee", b =>
                 {
                     b.Property<Guid>("Id")

@@ -2,12 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(MSBuildThisFileName).xml</DocumentationFile>
+    <ProjectGuid>{F4F0A1E5-CE1F-40C8-A099-22E368A1AE11}</ProjectGuid>
+    <PackageId>EntityFrameworkCore.SqlServer.Seeding</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Dejan Stojanovic</Authors>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>https://bit.ly/3k6FUC9</PackageIconUrl>
+    <!-- Icon origin: https://freeicons.io/sustainable-energy-2/plant-icon-25213 -->
+    <Description>SQL Server script seeding package for Entity Framework Core</Description>
+    
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\AddSeedingTrackingMigration.cs" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <None Remove="appsettings.json" />
   </ItemGroup>

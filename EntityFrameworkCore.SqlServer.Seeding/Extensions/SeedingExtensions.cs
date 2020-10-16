@@ -12,8 +12,16 @@ using System.Text;
 
 namespace EntityFrameworkCore.SqlServer.Seeding.Extensions
 {
+    /// <summary>
+    /// SQL server script seeding extensions
+    /// </summary>
     public static class SeedingExtensions
     {
+        /// <summary>
+        /// Enables script seeding
+        /// </summary>
+        /// <param name="services">Services collection</param>
+        /// <param name="connectionString">Database connection string</param>
         public static void AddScriptSeeding(this IServiceCollection services, String connectionString)
         {
             services.AddDbContext<SeedingDbContext>(options =>
@@ -27,6 +35,12 @@ namespace EntityFrameworkCore.SqlServer.Seeding.Extensions
             });
         }
 
+        /// <summary>
+        /// Seeds scripts
+        /// </summary>
+        /// <param name="app">Application builder instance</param>
+        /// <param name="seedingAssembly">Assembly containing scripts</param>
+        /// <param name="resourceFolder">Folder inside the project were scripts are located</param>
         public static void SeedFromScripts(this IApplicationBuilder app, Assembly seedingAssembly, String resourceFolder = "Seedings")
         {
             using (var serviceScope = app.ApplicationServices

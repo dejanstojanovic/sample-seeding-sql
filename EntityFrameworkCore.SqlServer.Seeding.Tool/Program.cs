@@ -4,8 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 
-namespace Sample.Seeding.Tool
+namespace EntityFrameworkCore.SqlServer.Seeding.Tool
 {
+    /// <summary>
+    /// CLI tool entry point method
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -121,7 +124,7 @@ namespace Sample.Seeding.Tool
                     return 0;
                 });
 
-                
+
             });
             cmd.Execute(args);
 

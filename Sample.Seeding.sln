@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Seeding.Data.Infrast
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Seeding.Domain", "Sample.Seeding.Domain\Sample.Seeding.Domain.csproj", "{2591E39E-28AC-4054-A690-106E04338635}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Seeding.Tool", "Sample.Seeding.Tool\Sample.Seeding.Tool.csproj", "{CEC5B27D-087A-4F37-82DA-5028A22A2683}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{E67C209F-7B3E-4916-83E6-E43200024D31}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package", "Package", "{1A457B8D-4A45-43A7-8D9F-FDB0C77F7806}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore.SqlServer.Seeding", "EntityFrameworkCore.SqlServer.Seeding\EntityFrameworkCore.SqlServer.Seeding.csproj", "{9C4E9487-CD9F-4C36-BF51-A1A68E38D6BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkCore.SqlServer.Seeding.Tool", "EntityFrameworkCore.SqlServer.Seeding.Tool\EntityFrameworkCore.SqlServer.Seeding.Tool.csproj", "{19FB2D60-4965-4E2A-ABDC-5744BD323F6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,14 +35,14 @@ Global
 		{2591E39E-28AC-4054-A690-106E04338635}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2591E39E-28AC-4054-A690-106E04338635}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2591E39E-28AC-4054-A690-106E04338635}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CEC5B27D-087A-4F37-82DA-5028A22A2683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CEC5B27D-087A-4F37-82DA-5028A22A2683}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CEC5B27D-087A-4F37-82DA-5028A22A2683}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CEC5B27D-087A-4F37-82DA-5028A22A2683}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9C4E9487-CD9F-4C36-BF51-A1A68E38D6BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9C4E9487-CD9F-4C36-BF51-A1A68E38D6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C4E9487-CD9F-4C36-BF51-A1A68E38D6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C4E9487-CD9F-4C36-BF51-A1A68E38D6BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FB2D60-4965-4E2A-ABDC-5744BD323F6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FB2D60-4965-4E2A-ABDC-5744BD323F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FB2D60-4965-4E2A-ABDC-5744BD323F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FB2D60-4965-4E2A-ABDC-5744BD323F6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,8 +51,8 @@ Global
 		{58CDD396-95E5-4586-AB78-C1D5CCAB2564} = {E67C209F-7B3E-4916-83E6-E43200024D31}
 		{A91D0C35-D9E2-467F-BFBC-410D4E497291} = {E67C209F-7B3E-4916-83E6-E43200024D31}
 		{2591E39E-28AC-4054-A690-106E04338635} = {E67C209F-7B3E-4916-83E6-E43200024D31}
-		{CEC5B27D-087A-4F37-82DA-5028A22A2683} = {E67C209F-7B3E-4916-83E6-E43200024D31}
 		{9C4E9487-CD9F-4C36-BF51-A1A68E38D6BE} = {1A457B8D-4A45-43A7-8D9F-FDB0C77F7806}
+		{19FB2D60-4965-4E2A-ABDC-5744BD323F6C} = {1A457B8D-4A45-43A7-8D9F-FDB0C77F7806}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9174862-84E4-4B7A-97DD-F7AB411C4D4B}
